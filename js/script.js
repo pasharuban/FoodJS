@@ -199,7 +199,7 @@ window.addEventListener("DOMContentLoaded", function () {
         descr,
         price,
         ".menu .container"
-      ).render(); 
+      ).render();
     });
   });
 
@@ -294,3 +294,92 @@ window.addEventListener("DOMContentLoaded", function () {
     }, 4000);
   }
 });
+
+//************************************//
+//               Slider               //
+//************************************//
+
+/*const prev = document.querySelector(".offer__slider-prev"),
+    next = document.querySelector(".offer__slider-next"),
+    current = document.querySelector("#current"),
+    slides = document.querySelectorAll(".offer__slide");
+
+  let currentIndex = 0,
+    totalAmount = 4;
+
+  function addZeroBeforeNumber(currentIndex) {
+    let flag = false;
+    if (Math.floor(currentIndex / 10) == 0) flag = true;
+
+    return flag;
+  }
+
+  function insertNumerationOfSlide(current, currentIndex) {
+    if (addZeroBeforeNumber(currentIndex))
+      current.textContent = `${"0" + (currentIndex + 1)}`;
+    else current.textContent = `${currentIndex + 1}`;
+  }
+
+  function start(slides, currentIndex, current) {
+    slides[0].classList.add("show");
+    insertNumerationOfSlide(current, currentIndex);
+    for (let i = 1; i < slides.length; i++) {
+      slides[i].classList.add("hide");
+      // slides[i].classList.add("fade");
+    }
+  }
+
+  function hide(slides, currentIndex) {
+    for (let i = 0; i < slides.length; i++) {
+      if (i == currentIndex) slides[i].classList.add("hide");
+    }
+  }
+
+  function show(slides, currentIndex, current) {
+    for (let i = 0; i < slides.length; i++) {
+      if (i == currentIndex) {
+        slides[i].classList.remove("hide");
+        slides[i].classList.add("show");
+
+        insertNumerationOfSlide(current, currentIndex);
+      }
+    }
+  }
+
+  function sliderManipulation(
+    prev,
+    next,
+    current,
+    total,
+    slides,
+    currentIndex,
+    totalAmount
+  ) {
+    start(slides, currentIndex, current);
+
+    next.addEventListener("click", () => {
+      hide(slides, currentIndex);
+      if (currentIndex != totalAmount - 1) currentIndex++;
+      else currentIndex = 0;
+
+      show(slides, currentIndex, current);
+    });
+
+    prev.addEventListener("click", () => {
+      hide(slides, currentIndex);
+      if (currentIndex != 0) currentIndex--;
+      else currentIndex = totalAmount - 1;
+
+      show(slides, currentIndex, current);
+    });
+  }
+
+  sliderManipulation(
+    prev,
+    next,
+    current,
+    total,
+    slides,
+    currentIndex,
+    totalAmount
+  );*/
