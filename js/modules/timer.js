@@ -1,12 +1,6 @@
-function timer() {
-  //************************************//
-  //               Timer                //
-  //************************************//
-
-  const deadline = "2021-11-11"; // срок до которого у нас идет акция(таймер)
-
+function timer(id, deadline) {
   function getTimeRemaining(endtime) {
-    const t = Date.parse(endtime) - Date.parse(new Date()), //Date.parse разбирает строку даты и возвращает кол-во милисекунд
+    const t = Date.parse(endtime) - Date.parse(new Date()),
       days = Math.floor(t / (1000 * 60 * 60 * 24)),
       seconds = Math.floor((t / 1000) % 60),
       minutes = Math.floor((t / 1000 / 60) % 60),
@@ -53,7 +47,7 @@ function timer() {
     }
   }
 
-  setClock(".timer", deadline);
+  setClock(id, deadline);
 }
 
 export default timer;
